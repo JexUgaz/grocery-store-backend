@@ -23,8 +23,9 @@ public class GlobalExceptionMiddleware(RequestDelegate next, ILogger<GlobalExcep
 
             var path = context.Request.Path;
             var statusCode = context.Response.StatusCode;
-            if (statusCode == 404) throw new NotFoundException($"No resource found for path: {path}");
-            if (statusCode == 405) throw new MethodNotAllowedException(context.Request.Method);
+            if (statusCode == StatusCodes.Status404NotFound) throw new NotFoundException($"No resource found for path: {path}");
+            if (statusCode == StatusCodes.Status405MethodNotAllowed) throw new MethodNotAllowedException(context.Request.Method);
+            if (statusCode == StatusCodes.Status415UnsupportedMediaType) throw new UnsupportedMediaTypeException();
         }
         catch (Exception ex)
         {

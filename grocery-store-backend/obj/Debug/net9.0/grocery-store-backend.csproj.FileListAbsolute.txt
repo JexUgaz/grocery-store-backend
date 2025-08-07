@@ -312,3 +312,4 @@ D:\devprojects\c_shar\grocery-store-backend\grocery-store-backend\obj\Debug\net9
 D:\devprojects\c_shar\grocery-store-backend\grocery-store-backend\obj\Debug\net9.0\grocery-.6E3046E0.Up2Date
 D:\devprojects\c_shar\grocery-store-backend\grocery-store-backend\obj\Debug\net9.0\grocery-store-backend.genruntimeconfig.cache
 D:\devprojects\c_shar\grocery-store-backend\grocery-store-backend\obj\Debug\net9.0\ref\grocery-store-backend.dll
+D:\devprojects\c_shar\grocery-store-backend\grocery-store-backend\obj\Debug\net9.0\grocery-store-backend.sourcelink.json

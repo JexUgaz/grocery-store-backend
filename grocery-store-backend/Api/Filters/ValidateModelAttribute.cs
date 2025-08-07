@@ -1,9 +1,9 @@
-using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Exceptions = grocery_store_backend.Config.Exceptions;
 namespace grocery_store_backend.Api.Filters;
 
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = true, AllowMultiple = false)]
-public class ValidateModelAttribute : ActionFilterAttribute
+public class ValidateModelAttribute() : ActionFilterAttribute
 {
     public override void OnActionExecuting(ActionExecutingContext context)
     {
@@ -14,6 +14,6 @@ public class ValidateModelAttribute : ActionFilterAttribute
             .Select(e => e.ErrorMessage);
 
         string details = string.Join("; ", errors);
-        throw new ValidationException(details);
+        throw new Exceptions.ValidationException(details);
     }
 }

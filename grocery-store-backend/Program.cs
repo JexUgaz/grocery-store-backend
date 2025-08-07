@@ -24,8 +24,8 @@ builder.Services.AddControllers()
 builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
     options.SuppressModelStateInvalidFilter = true;
+    options.SuppressMapClientErrors = true;
 });
-
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductsService>();
